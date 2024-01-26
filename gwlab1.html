@@ -15,34 +15,45 @@
   .image-container {
     position: relative;
   }
+  .image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0000; /* Red background */
+    mix-blend-mode: multiply; /* Default blend mode */
+    z-index: -1;
+  }
   .image-container img {
     width: 100%; /* Full width */
     display: block; /* Remove extra space */
-    mix-blend-mode: multiply; /* Default blend mode */
   }
-  /* You can customize the blend modes for each image as needed */
-  .image-container:nth-child(1) img { mix-blend-mode: normal; }
-  .image-container:nth-child(2) img { mix-blend-mode: color; }
-  .image-container:nth-child(3) img { mix-blend-mode: darken; }
-  .image-container:nth-child(4) img { mix-blend-mode: lighten; }
-  .image-container:nth-child(5) img { mix-blend-mode: difference; }
-  .image-container:nth-child(6) img { mix-blend-mode: exclusion; }
-  .image-container:nth-child(7) img { mix-blend-mode: hard-light; }
-  .image-container:nth-child(8) img { mix-blend-mode: hue; }
-  .image-container:nth-child(9) img { mix-blend-mode: saturation; }
+  /* Apply different backgrounds and blend modes for each image */
+  .image-container:nth-child(1)::before { background: #ff0000; mix-blend-mode: normal; }
+  .image-container:nth-child(2)::before { background: #00ff00; mix-blend-mode: color; }
+  .image-container:nth-child(3)::before { background: #0000ff; mix-blend-mode: darken; }
+  .image-container:nth-child(4)::before { background: #ffff00; mix-blend-mode: lighten; }
+  .image-container:nth-child(5)::before { background: #ff00ff; mix-blend-mode: difference; }
+  .image-container:nth-child(6)::before { background: #00ffff; mix-blend-mode: exclusion; }
+  .image-container:nth-child(7)::before { background: #ffffff; mix-blend-mode: hard-light; }
+  .image-container:nth-child(8)::before { background: #000000; mix-blend-mode: hue; }
+  .image-container:nth-child(9)::before { background: #9f9f9f; mix-blend-mode: saturation; }
 </style>
 </head>
 <body>
 
-<div class="image-container"><img src="image1.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image2.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image3.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image4.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image5.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image6.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image7.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image8.png" alt="Pop Art Image"></div>
-<div class="image-container"><img src="image9.png" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image1.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image2.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image3.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image4.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image5.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image6.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image7.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image8.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image9.jpg" alt="Pop Art Image"></div>
 
 </body>
 </html>
