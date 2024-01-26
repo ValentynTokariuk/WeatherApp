@@ -41,6 +41,31 @@
   .image-container:nth-child(7)::before { background: #ffffff; mix-blend-mode: hard-light; }
   .image-container:nth-child(8)::before { background: #000000; mix-blend-mode: hue; }
   .image-container:nth-child(9)::before { background: #9f9f9f; mix-blend-mode: saturation; }
+  .video-container {
+    position: relative;
+    max-width: 640px; /* Adjust as needed */
+    margin: auto;
+  }
+  .video-container video {
+    width: 100%;
+    display: block;
+  }
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay; /* You can change this to other blend modes */
+    animation: color-change 10s infinite alternate;
+  }
+  @keyframes color-change {
+    0% { background: rgba(255, 0, 0, 0.5); }
+    25% { background: rgba(0, 255, 0, 0.5); }
+    50% { background: rgba(0, 0, 255, 0.5); }
+    75% { background: rgba(255, 255, 0, 0.5); }
+    100% { background: rgba(255, 0, 255, 0.5); }
+  }
 </style>
 </head>
 <body>
@@ -54,6 +79,12 @@
 <div class="image-container"><img src="image7.png" alt="Pop Art Image"></div>
 <div class="image-container"><img src="image8.png" alt="Pop Art Image"></div>
 <div class="image-container"><img src="image9.png" alt="Pop Art Image"></div>
+
+<!-- Video Container -->
+<div class="video-container">
+  <video src="your_video.mp4" autoplay loop muted></video>
+  <div class="color-overlay"></div>
+</div>
 
 </body>
 </html>
