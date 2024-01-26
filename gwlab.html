@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Filters Matrix</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create a 4-column grid */
+    grid-auto-rows: minmax(100px, auto); /* Define the row size */
+    gap: 10px; /* Space between items */
+  }
+  img {
+    width: 100%; /* Make images fill their container */
+    display: block; /* Remove any extra space below images */
+  }
+  .span-2 { grid-column: span 2; } /* Span across two columns */
+  .span-4 { grid-column: span 4; } /* Span across four columns */
+</style>
+</head>
+<body>
+
+<!-- Single Filters -->
+<img src="img200x300.png" style="filter: blur(2px);">
+<img src="img200x300.png" style="filter: brightness(0.8);">
+<img src="img200x300.png" style="filter: contrast(150%);">
+<img src="img200x300.png" style="filter: grayscale(50%);">
+<img src="img200x300.png" style="filter: invert(50%);">
+<img src="img200x300.png" style="filter: opacity(75%);">
+<img src="img200x300.png" style="filter: saturate(2);">
+<img src="img200x300.png" style="filter: sepia(50%);">
+
+<!-- Double Filters -->
+<img src="img200x300.png" class="span-2" style="filter: blur(1px) brightness(0.7);">
+<img src="img200x300.png" class="span-2" style="filter: contrast(120%) grayscale(25%);">
+<img src="img200x300.png" class="span-2" style="filter: invert(25%) opacity(80%);">
+<img src="img200x300.png" class="span-2" style="filter: saturate(1.5) sepia(25%);">
+
+<!-- Four Filters -->
+<img src="img500x750.png" class="span-4" style="filter: blur(0.5px) brightness(0.6) contrast(110%) grayscale(10%);">
+<img src="img500x750.png" class="span-4" style="filter: invert(20%) opacity(85%) saturate(1.2) sepia(15%);">
+
+</body>
+</html>
