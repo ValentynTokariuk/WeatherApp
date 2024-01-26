@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pop Art Collage</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    gap: 10px; /* Space between images */
+  }
+  .image-container {
+    position: relative;
+  }
+  .image-container img {
+    width: 100%; /* Full width */
+    display: block; /* Remove extra space */
+    mix-blend-mode: multiply; /* Default blend mode */
+  }
+  /* You can customize the blend modes for each image as needed */
+  .image-container:nth-child(1) img { mix-blend-mode: normal; }
+  .image-container:nth-child(2) img { mix-blend-mode: color; }
+  .image-container:nth-child(3) img { mix-blend-mode: darken; }
+  .image-container:nth-child(4) img { mix-blend-mode: lighten; }
+  .image-container:nth-child(5) img { mix-blend-mode: difference; }
+  .image-container:nth-child(6) img { mix-blend-mode: exclusion; }
+  .image-container:nth-child(7) img { mix-blend-mode: hard-light; }
+  .image-container:nth-child(8) img { mix-blend-mode: hue; }
+  .image-container:nth-child(9) img { mix-blend-mode: saturation; }
+</style>
+</head>
+<body>
+
+<div class="image-container"><img src="image1.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image2.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image3.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image4.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image5.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image6.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image7.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image8.jpg" alt="Pop Art Image"></div>
+<div class="image-container"><img src="image9.jpg" alt="Pop Art Image"></div>
+
+</body>
+</html>
