@@ -18,6 +18,15 @@
     flex-direction: column;
     align-items: center;
   }
+  .image-container .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 5px; /* Some padding */
+    text-align: center; /* Center the text */
   .image-container img {
     width: 100%; /* Make images fill their container */
     display: block; /* Remove any extra space below images */
@@ -37,7 +46,7 @@
 <div class="image-container"><img src="img200x300.png" style="filter: brightness(0.8);"><div class="caption">Brightness</div></div>
 <div class="image-container"><img src="img200x300.png" style="filter: contrast(150%);"><div class="caption">Contrast</div></div>
 <div class="image-container"><img src="img200x300.png" style="filter: grayscale(50%);"><div class="caption">Grayscale</div></div>
-<div class="image-container"><img src="img200x300.png" style="filter: invert(30%);"><div class="caption">Invert</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: invert(100%);"><div class="caption">Invert</div></div>
 <div class="image-container"><img src="img200x300.png" style="filter: opacity(75%);"><div class="caption">Opacity</div></div>
 <div class="image-container"><img src="img200x300.png" style="filter: saturate(2);"><div class="caption">Saturate</div></div>
 <div class="image-container"><img src="img200x300.png" style="filter: sepia(50%);"><div class="caption">Sepia</div></div>
