@@ -7,41 +7,50 @@
 <style>
   body {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Create a 4-column grid */
     grid-auto-rows: minmax(100px, auto); /* Define the row size */
     gap: 10px; /* Space between items */
   }
-  img {
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-container img {
     width: 100%; /* Make images fill their container */
     display: block; /* Remove any extra space below images */
   }
   .span-2 { grid-column: span 2; } /* Span across two columns */
   .span-4 { grid-column: span 4; } /* Span across four columns */
+  .caption {
+    text-align: center;
+    margin-top: 5px;
+  }
 </style>
 </head>
 <body>
 
 <!-- Single Filters -->
-<img src="img200x300.png" style="filter: blur(2px);">
-<img src="img200x300.png" style="filter: brightness(0.8);">
-<img src="img200x300.png" style="filter: contrast(150%);">
-<img src="img200x300.png" style="filter: grayscale(50%);">
-<img src="img200x300.png" style="filter: invert(50%);">
-<img src="img200x300.png" style="filter: opacity(75%);">
-<img src="img200x300.png" style="filter: saturate(2);">
-<img src="img200x300.png" style="filter: sepia(50%);">
+<div class="image-container"><img src="img200x300.png" style="filter: blur(2px);"><div class="caption">Blur</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: brightness(0.8);"><div class="caption">Brightness</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: contrast(150%);"><div class="caption">Contrast</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: grayscale(50%);"><div class="caption">Grayscale</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: invert(50%);"><div class="caption">Invert</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: opacity(75%);"><div class="caption">Opacity</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: saturate(2);"><div class="caption">Saturate</div></div>
+<div class="image-container"><img src="img200x300.png" style="filter: sepia(50%);"><div class="caption">Sepia</div></div>
 
 <!-- Double Filters -->
-<img src="img200x300.png" class="span-2" style="filter: blur(1px) brightness(0.7);">
-<img src="img200x300.png" class="span-2" style="filter: contrast(120%) grayscale(25%);">
-<img src="img200x300.png" class="span-2" style="filter: invert(25%) opacity(80%);">
-<img src="img200x300.png" class="span-2" style="filter: saturate(1.5) sepia(25%);">
+<div class="image-container span-2"><img src="img200x300.png" style="filter: blur(1px) brightness(0.7);"><div class="caption">Blur + Brightness</div></div>
+<div class="image-container span-2"><img src="img200x300.png" style="filter: contrast(120%) grayscale(25%);"><div class="caption">Contrast + Grayscale</div></div>
+<div class="image-container span-2"><img src="img200x300.png" style="filter: invert(25%) opacity(80%);"><div class="caption">Invert + Opacity</div></div>
+<div class="image-container span-2"><img src="img200x300.png" style="filter: saturate(1.5) sepia(25%);"><div class="caption">Saturate + Sepia</div></div>
 
 <!-- Four Filters -->
-<img src="img500x750.png" class="span-4" style="filter: blur(0.5px) brightness(0.6) contrast(110%) grayscale(10%);">
-<img src="img500x750.png" class="span-4" style="filter: invert(20%) opacity(85%) saturate(1.2) sepia(15%);">
+<div class="image-container span-4"><img src="img500x750.png" style="filter: blur(0.5px) brightness(0.6) contrast(110%) grayscale(10%);"><div class="caption">Blur + Brightness + Contrast + Grayscale</div></div>
+<div class="image-container span-4"><img src="img500x750.png" style="filter: invert(20%) opacity(85%) saturate(1.2) sepia(15%);"><div class="caption">Invert + Opacity + Saturate + Sepia</div></div>
 
 </body>
 </html>
